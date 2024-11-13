@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
+import 'package:mental_health_tracker/screens/list_moodentry.dart';
 import 'package:mental_health_tracker/screens/menu.dart';
 import 'package:mental_health_tracker/screens/moodentry_form.dart';
 // TODO: Impor halaman MoodEntryFormPage jika sudah dibuat
@@ -70,6 +71,17 @@ class LeftDrawer extends StatelessWidget {
                 TODO: Buatlah routing ke MoodEntryFormPage di sini,
                 setelah halaman MoodEntryFormPage sudah dibuat.
                 */
+              },
+            ),
+              ListTile(
+              leading: const Icon(Icons.add_reaction_rounded),
+              title: const Text('Daftar Mood'),
+              onTap: () {
+                  // Route menu ke halaman mood
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const MoodEntryPage()),
+                  );
               },
             ),
 
